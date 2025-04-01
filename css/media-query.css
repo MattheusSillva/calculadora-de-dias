@@ -30,11 +30,16 @@
     }
 
     #inputs {
+        justify-content: center;
         flex-direction: column;
     }
 
     .form-control {
         justify-content: center;
+    }
+
+    .form-control {
+        text-align: center;
     }
 
     .results {
