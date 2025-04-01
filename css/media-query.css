@@ -33,6 +33,10 @@
         flex-direction: column;
     }
 
+    .form-control {
+        justify-content: center;
+    }
+
     .results {
         max-width: 410px;
         font-size: .9em;
