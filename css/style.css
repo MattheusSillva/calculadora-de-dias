@@ -86,6 +86,7 @@ main {
 #inputs {
     display: flex;
     justify-content: center;
+    flex-direction: row;
 }
 
 .form-control {
@@ -102,6 +103,7 @@ main {
 }
 
 .form-control input {
+    margin: auto;
     padding: .6rem 1.2rem;
     border: 1px solid #7f7fd3;
     border-radius: 5px;

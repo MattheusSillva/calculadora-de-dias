@@ -33,9 +33,14 @@
         justify-content: center;
         flex-direction: column;
     }
-
+    
     .form-control {
         justify-content: center;
+    }
+
+    .form-control input {
+        margin: auto;
+        min-width: 260px;
     }
 
     .form-control {
@@ -63,6 +68,11 @@
 
     .container > header nav ul li button{
         font-size: .7em;
+    }
+
+    .form-control input {
+        margin: auto;
+        min-width: 160px;
     }
 
     .results {

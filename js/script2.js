@@ -28,21 +28,24 @@ const createItems = (dateFrom, dateTo, daysRemaining, token, passed) => {
     } else {
       displayParagraph.innerText = `Entre ${dateFrom.getUTCDate()}/${dateFrom.getUTCMonth() + 1}/${dateFrom.getUTCFullYear()} e ${dateTo.getUTCDate()}/${dateTo.getUTCMonth() + 1}/${dateTo.getUTCFullYear()}:`;
       titleInHolidayCase.innerText = "Passaram-se em torno de:"
-      // spanBeginning.innerText = `${dateFrom.getUTCDate()}/${dateFrom.getUTCMonth() + 1}/${dateFrom.getUTCFullYear()}`;
-      // spanFinal.innerText = `${dateTo.getUTCDate()}/${dateTo.getUTCMonth() + 1}/${dateTo.getUTCFullYear()}`;
       daysResult.innerText = `${daysRemaining} dias.`;
     }
     
   } 
   else if (token && passed) {
-    displayParagraph.innerText = `Parece que o(a) ${token} ja passou! Para o(a) próximo: `
+    displayParagraph.innerText = `Parece que o(a) ${token} já passou!. Para o(a) próximo: `
     daysResult.innerText = `${daysRemaining} dias.`
     titleInHolidayCase.innerText = "Faltam em torno de:"
   }
   else if(token) {
-    displayParagraph.innerText = `Para o(a) ${token}: `
-    daysResult.innerText = `${daysRemaining} dias.`
-    titleInHolidayCase.innerText = "Faltam em torno de:"
+    if (daysRemaining == 0) {
+      displayParagraph.innerText = `O(a) ${token} é hoje, aproveite o feriado e se divirta bastante. `
+      titleInHolidayCase.innerText = "O feriado chegou!"
+    } else {
+      displayParagraph.innerText = `Para o(a) ${token}: `
+      daysResult.innerText = `${daysRemaining} dias.`
+      titleInHolidayCase.innerText = "Faltam em torno de:"
+    }
   }
 
   divResults.classList.remove("hide");
@@ -58,10 +61,9 @@ const calcHolidayDates = (holidayDate, token, passed) => {
 const calcDate = () => {
   const dateFrom = new Date(inputFrom.value || currentFullDate);
   dateFrom.setUTCHours(0, 0, 0, 0);
-  console.log(dateFrom)
+
   const dateTo = new Date(inputTo.value || currentFullDate);
   dateTo.setUTCHours(0, 0, 0, 0);
-  console.log(dateTo)
 
   const timeRemaining = Math.ceil(dateTo - dateFrom);
   const daysRemaining = Math.abs(timeRemaining / millSecsInOneDay);
@@ -130,13 +132,10 @@ mothersDayBtn.addEventListener("click", () => {
     diaDasMaes.setDate(firstSundayOfMay.getDate() + 7);
 
     const token = "dia das mães"
-      console.log("ja passou");
       
     } else {
       calcHolidayDates(diaDasMaes, token);
     }
-
-    console.log(diaDasMaes);
 })
 
 christmasBtn.addEventListener("click", () => {
