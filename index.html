@@ -1,64 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de dias</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/media-query.css">
-    <link rel="shortcut icon" href="assets/icons8-calendário-16.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media-query.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/icons8-calendário-16.png"
+      type="image/x-icon"
+    />
     <script src="js/script2.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <h1>Contador de dias entre datas</h1>
-            <p>Calcule a diferença entre datas de forma simples e rápida.</p>
-            <nav>
-                <ul>
-                    <li><button id="carnival">Carnaval</button></li>
-                    <li><button id="easter">Páscoa</button></li>
-                    <li><button id="mothers-day">Dias das mães</button></li>
-                    <li><button id="christmas">Natal</button></li>
-                    <li><button id="new-year">Ano novo</button></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <div id="inputs">
-                <div class="form-control">
-                    <label for="date-from">Data de início
-                        <abbr title="Adicione a data de início, caso a data de fim seja maior, o contador ainda funcionará contando de trás para frente.">
-                            <i class="fa-solid fa-circle-info"></i>
-                        </abbr>
-                        </label>
-                        </label>
-                    <input type="date" name="date-from" id="date-from">
-                </div>
-                <div class="form-control">
-                    <label for="date-to">Data de fim
-                        <abbr title="Adicione a data de fim, caso a data de início seja maior, o contador ainda funcionará contando de trás para frente">
-                             <i class="fa-solid fa-circle-info"></i>
-                        </label>
-                    </abbr>
-                    <input type="date" name="date-to" id="date-to">
-                </div>
-            </div>
-            <div id="button">
-                <button id="calc-btn">Calcular</button>
-            </div>
-            <div class="results hide">
-                <header>
-                    <h2>Resultado do cálculo:</h2>
-                    <p id="display-paragraph">Entre <span id="span-date-beggining"></span> e <span id="span-date-final"></span> pasaram-se:</p>
-                </header>
-                <div class="main-results">
-                    <h3 id="holiday-case-title">Dias corridos:</h3>
-                    <p id="days-result-p"></p>
-                </div>
-            </div>
-        </main>
+      <header>
+        <h1>Contador de dias entre datas</h1>
+        <p>Calcule a diferença entre datas de forma simples e rápida.</p>
+        <nav>
+          <ul>
+            <li><button id="carnival">Carnaval</button></li>
+            <li><button id="easter">Páscoa</button></li>
+            <li><button id="mothers-day">Dias das mães</button></li>
+            <li><button id="christmas">Natal</button></li>
+            <li><button id="new-year">Ano novo</button></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <div id="inputs">
+          <div class="form-control">
+            <label for="date-from"
+              >Data de início
+              <abbr
+                title="Adicione a data de início, caso a data de fim seja maior, o contador ainda funcionará contando de trás para frente."
+              >
+                <i class="fa-solid fa-circle-info"></i>
+              </abbr>
+            </label>
+            <input type="date" name="date-from" id="date-from" />
+          </div>
+          <div class="form-control">
+            <label for="date-to"
+              >Data de fim
+              <abbr
+                title="Adicione a data de fim, caso a data de início seja maior, o contador ainda funcionará contando de trás para frente"
+              >
+                <i class="fa-solid fa-circle-info"></i>
+              </abbr>
+            </label>
+            <input type="date" name="date-to" id="date-to" />
+          </div>
+        </div>
+        <div id="button">
+          <button id="calc-btn">Calcular</button>
+        </div>
+        <div class="results hide">
+          <header>
+            <h2>Resultado do cálculo:</h2>
+            <p id="display-paragraph">
+              Entre <span id="span-date-beggining"></span> e
+              <span id="span-date-final"></span> pasaram-se:
+            </p>
+          </header>
+          <div class="main-results">
+            <h3 id="holiday-case-title">Dias corridos:</h3>
+            <p id="days-result-p"></p>
+          </div>
+        </div>
+      </main>
     </div>
-</body>
+  </body>
 </html>
